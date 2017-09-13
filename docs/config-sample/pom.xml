@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>ppc-cloud-starter</artifactId>
+		<groupId>com.ppcredit.cloud</groupId>
+		<version>0.6-SNAPSHOT</version>
+	</parent>
+	<groupId>com.ppcredit</groupId>
+	<artifactId>ppc-cloud-quickstart</artifactId>
+	<version>0.1-SNAPSHOT</version>
+
+	<distributionManagement>
+		<repository>
+			<id>ppc-releases</id>
+			<name>ppcredit nexus releases</name>
+			<url>http://nexus.ppc.com/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>ppc-snapshot</id>
+			<name>ppcredit nexus snapshot</name>
+			<url>http://nexus.ppc.com/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>ppc-snapshot-repo</id>
+			<name>ppcredit snapshot repositories</name>
+			<url>http://nexus.ppc.com/nexus/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>ignore</checksumPolicy>
+			</releases>
+			<id>ppc-release-repo</id>
+			<name>ppcredit release repositories</name>
+			<url>http://nexus.ppc.com/nexus/content/repositories/releases/</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+	</build>
+</project>
